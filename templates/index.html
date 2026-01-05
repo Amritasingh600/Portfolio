@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrita - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Amrita</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="particles" id="particles"></div>
+        <div class="home-container">
+            <div class="home-content">
+                <div class="text-content">
+                    <div class="greeting">
+                        <span class="wave">👋</span>
+                        <span>Hello, I'm</span>
+                    </div>
+                    <h1 class="name-title">
+                        <span class="name-letter">A</span>
+                        <span class="name-letter">m</span>
+                        <span class="name-letter">r</span>
+                        <span class="name-letter">i</span>
+                        <span class="name-letter">t</span>
+                        <span class="name-letter">a</span>
+                    </h1>
+                    <div class="typing-container">
+                        <span class="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="description">
+                        Passionate student crafting innovative solutions through code. 
+                        Exploring the endless possibilities of technology and design.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="{{ url_for('static', filename='resume.pdf') }}" download="Amrita_Resume.pdf" class="btn btn-secondary">
+                            <i class="fas fa-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Amritasingh600" target="_blank" class="social-icon" data-tooltip="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/amrita-singh-308333326/" target="_blank" class="social-icon" data-tooltip="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/Amrita_singh600/" target="_blank" class="social-icon" data-tooltip="LeetCode">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/_2415500063" target="_blank" class="social-icon" data-tooltip="HackerRank">
+                            <i class="fab fa-hackerrank"></i>
+                        </a>
+                        <a href="mailto:singhamrita2904@gmail.com" class="social-icon" data-tooltip="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <div class="profile-showcase">
+                        <div class="paint-container">
+                            <div class="paint-stroke"></div>
+                            <div class="profile-image-wrapper">
+                                <img src="{{ url_for('static', filename='pic.jpeg') }}" alt="Amrita" class="profile-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>ML Enthusiast | AIML Specialist | Problem Solver</h3>
+                    <p>I'm a passionate Computer Science student specializing in Artificial Intelligence and Machine Learning at GLA University. My journey in AI/ML is driven by curiosity and a desire to create intelligent solutions that make a real-world impact.</p>
+                    <p>With expertise in machine learning algorithms, deep learning, and data science, I've completed comprehensive courses from Stanford University and earned multiple Azure AI certifications. I specialize in developing AI-powered applications, predictive models, and intelligent systems.</p>
+                    <p>My technical arsenal includes Python, TensorFlow, scikit-learn, and various ML frameworks. I'm constantly exploring cutting-edge AI technologies and applying them to solve complex problems through innovative projects.</p>
+                    
+                    <div class="education-section">
+                        <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h5>Bachelor of Technology in Computer Science with Specialization in AIML</h5>
+                                <span class="education-year">2024 - 2028</span>
+                            </div>
+                            <p class="education-institution">GLA University</p>
+                            <p class="education-gpa">CGPA: 8.2</p>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h5>Senior Secondary Education</h5>
+                                <span class="education-year">2022 - 2024</span>
+                            </div>
+                            <p class="education-institution">Kanha Makhan Public School</p>
+                            <p class="education-gpa">Percentage: 87%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-count="6">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Achievements</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-count="13">0</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-coffee"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-count="1000">0</span>
+                            <span class="stat-label">Cups of Coffee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Frameworks & Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-flask"></i></div>
+                            <span class="skill-name">Flask</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <span class="skill-name">Django</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fa fa-database"></i></div>
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span class="skill-name">MongoDB(currently learning) </span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning & AI</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                            <span class="skill-name">Machine Learning</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <span class="skill-name">Deep Learning</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                            <span class="skill-name">TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                            <span class="skill-name">PyTorch</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <span class="skill-name">Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-cube"></i></div>
+                            <span class="skill-name">YOLO</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-chart-area"></i></div>
+                            <span class="skill-name">NumPy & Pandas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
+                            <span class="skill-name">Google Gemini AI</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-palette"></i> Design & Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-windows"></i></div>
+                            <span class="skill-name">Visual Studio Code</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+                            <span class="skill-name">Microsoft Azure</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='travel planner.png') }}" alt="AI Travel Planner">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Amritasingh600/travel_planner" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://travel-planner-chi-flax.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Travel Planner ✈️</h3>
+                        <p>Comprehensive travel planning app using Google Gemini AI to generate personalized itineraries with interactive maps, route planning, and detailed recommendations.</p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">Google Gemini AI</span>
+                            <span class="tag">Leaflet.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='pneo_detect.png') }}" alt="X-Ray Pneumonia Detection">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Amritasingh600/x_ray_detect" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Amritasingh600/x_ray_detect" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Chest X-Ray Pneumonia Detection 🏥</h3>
+                        <p>AI-powered medical diagnosis system combining YOLO deep learning models with Gemini AI for pneumonia detection and comprehensive medical analysis.</p>
+                        <div class="project-tags">
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">YOLO</span>
+                            <span class="tag">Gemini AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='ai tutor.png') }}" alt="Educational Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Amritasingh600/aitutor" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Amritasingh600/aitutor" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Educational Platform 📚</h3>
+                        <p>Dual-portal educational system with AI Tutor using Socratic method, offline search engine, and faculty knowledge base management.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js 14</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Google AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='climate_pred.png') }}" alt="Climate Data Explorer">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Amritasingh600/weather-app" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Amritasingh600/weather-app" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Climate Data Visual Explorer 🌍</h3>
+                        <p>Modern web app to visualize and analyze climate data with AI insights, anomaly detection, interactive charts, and air quality monitoring.</p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">Open-Meteo API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='diabetes_pred.png') }}" alt="Diabetes Prediction">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Amritasingh600/diabetes_prediction" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Amritasingh600/diabetes_prediction" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Diabetes Prediction System 💉</h3>
+                        <p>Machine learning-based healthcare application for diabetes risk prediction with trained model pipelines and user-friendly interface.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='real vs ai.png') }}" alt="Real vs Fake Detection">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Amritasingh600/Real_vs_Fake" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Amritasingh600/Real_vs_Fake" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Real vs Fake Image Detection 🔍</h3>
+                        <p>Deep learning application to detect fake or manipulated images using advanced computer vision techniques and neural networks.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <h2 class="section-title">Achievements & Awards</h2>
+            <div class="achievements-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h3>Ventureathon Winner - 2nd Position</h3>
+                        <p>Secured 2nd position in Ventureathon, demonstrating innovative entrepreneurial skills and technical excellence in developing venture solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h3>IIT Bombay Techfest Participant</h3>
+                        <p>Participated in IIT Bombay Techfest, one of Asia's largest science and technology festivals, showcasing technical projects and innovations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025-2026</span>
+                        <h3>Machine Learning Course Completion</h3>
+                        <p>Successfully completed comprehensive Machine Learning course from Stanford University, mastering supervised, unsupervised learning, and advanced algorithms.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h3>Microsoft Azure Certifications</h3>
+                        <p>Earned multiple Microsoft Azure certifications including Azure Fundamentals and AI Fundamentals (AI-900), demonstrating cloud computing expertise.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024-2025</span>
+                        <h3>HackerRank Programming Excellence</h3>
+                        <p>Achieved multiple HackerRank certifications in C programming, demonstrating strong problem-solving abilities and programming proficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certificates-grid">
+                <!-- Microsoft Certifications -->
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>MS Azure Fundamentals</h3>
+                        <p class="certificate-issuer">Microsoft</p>
+                        <p class="certificate-date">Azure Certification</p>
+                        <a href="{{ url_for('static', filename='ms azure fundamentals certificate.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Azure AI Fundamentals</h3>
+                        <p class="certificate-issuer">Microsoft</p>
+                        <p class="certificate-date">AI-900</p>
+                        <a href="{{ url_for('static', filename='ai900certificatw.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Coursera Certifications -->
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Machine Learning Specialization</h3>
+                        <p class="certificate-issuer">Coursera - Stanford University</p>
+                        <p class="certificate-date">Machine Learning</p>
+                        <a href="{{ url_for('static', filename='machine_learning_stanford.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Supervised Machine Learning</h3>
+                        <p class="certificate-issuer">Coursera - Stanford University</p>
+                        <p class="certificate-date">Machine Learning</p>
+                        <a href="{{ url_for('static', filename='supervised learning certificate.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Unsupervised Learning</h3>
+                        <p class="certificate-issuer">Coursera - Stanford University</p>
+                        <p class="certificate-date">Machine Learning</p>
+                        <a href="{{ url_for('static', filename='unsupervised_certificate.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Advanced Learning Algorithms</h3>
+                        <p class="certificate-issuer">Coursera - Stanford University</p>
+                        <p class="certificate-date">Machine Learning</p>
+                        <a href="{{ url_for('static', filename='advanced_learning_algorithm.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Data Science Certification -->
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>The Ultimate Job Ready Data Science Course</h3>
+                        <p class="certificate-issuer">Data Science</p>
+                        <p class="certificate-date">Complete Data Science Program</p>
+                        <a href="{{ url_for('static', filename='The_Ultimate_Job_Ready_Data_Science_Course_Certificate.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Web Development Certifications -->
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>HTML5 Certification</h3>
+                        <p class="certificate-issuer">Infosys Springboard</p>
+                        <p class="certificate-date">Web Development</p>
+                        <a href="{{ url_for('static', filename='infosys html.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>CSS3 Certification</h3>
+                        <p class="certificate-issuer">Infosys Springboard</p>
+                        <p class="certificate-date">Web Development</p>
+                        <a href="{{ url_for('static', filename='css infosys.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>JavaScript Certification</h3>
+                        <p class="certificate-issuer">Infosys Springboard</p>
+                        <p class="certificate-date">Web Development</p>
+                        <a href="{{ url_for('static', filename='js infosys (1).pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- C Programming Certifications -->
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>C Programming (Basic)</h3>
+                        <p class="certificate-issuer">HackerRank</p>
+                        <p class="certificate-date">Programming Certification</p>
+                        <a href="{{ url_for('static', filename='c basic hackerrank.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>C Programming (Intermediate)</h3>
+                        <p class="certificate-issuer">HackerRank</p>
+                        <p class="certificate-date">Programming Certification</p>
+                        <a href="{{ url_for('static', filename='intermediate c hackkerank.pdf') }}" target="_blank" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">My Gallery</h2>
+            <p class="section-subtitle">Moments from my journey - achievements, events, and experiences</p>
+        </div>
+        
+        <!-- First Row - Scroll Right -->
+        <div class="gallery-marquee">
+            <div class="gallery-track gallery-track-right">
+                <div class="gallery-item">
+                    <div class="gallery-circle">
+                        <img src="{{ url_for('static', filename='venture.jpeg') }}" alt="Ventureathon">
+                        <div class="gallery-info">
+                            <h4>Ventureathon 2025</h4>
+                            <p>2nd Position Winner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-circle">
+                        <img src="{{ url_for('static', filename='iitbombay techfest.jpeg') }}" alt="IIT Bombay">
+                        <div class="gallery-info">
+                            <h4>IIT Bombay</h4>
+                            <p>Techfest Participant</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="gallery-item">
+                    <div class="gallery-circle">
+                        <img src="{{ url_for('static', filename='venture.jpeg') }}" alt="Ventureathon">
+                        <div class="gallery-info">
+                            <h4>Ventureathon 2025</h4>
+                            <p>2nd Position Winner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-circle">
+                        <img src="{{ url_for('static', filename='iitbombay techfest.jpeg') }}" alt="IIT Bombay">
+                        <div class="gallery-info">
+                            <h4>IIT Bombay</h4>
+                            <p>Techfest Participant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:singhamrita2904@gmail.com">singhamrita2904@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Mathura ,Uttar Pradesh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://github.com/Amritasingh600" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/amrita-singh-308333326/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://leetcode.com/u/Amrita_singh600/" target="_blank"><i class="fas fa-code"></i></a>
+                        <a href="https://www.hackerrank.com/profile/_2415500063" target="_blank"><i class="fab fa-hackerrank"></i></a>
+                        <a href="mailto:singhamrita2904@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Amrita. Crafted with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+                <p class="footer-tagline">Turning ideas into reality, one line of code at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
