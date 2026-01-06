@@ -1,10 +1,23 @@
-# Environment variables - NEVER commit these!
+# Environment variables
 .env
-.env.local
-.env.*.local
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Static files
+staticfiles/
+
+# Media files (uploaded content)
+# Note: media/ is not ignored because we want to track structure
+# But large files should be uploaded via admin, not committed
 
 # Python
-__pycache__/
 *.py[cod]
 *$py.class
 *.so
@@ -16,10 +29,6 @@ build/
 dist/
 *.egg-info/
 
-# Flask
-instance/
-.webassets-cache
-
 # IDEs
 .vscode/
 .idea/
@@ -30,9 +39,3 @@ instance/
 # OS
 .DS_Store
 Thumbs.db
-
-# Temporary helper scripts (not needed in production)
-update_paths.py
-
-# Logs
-*.log
