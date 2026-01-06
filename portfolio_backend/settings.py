@@ -5,6 +5,7 @@ Django settings for portfolio_backend project.
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import dj_database_url
 
 # Load environment variables
 load_dotenv()
@@ -73,10 +74,9 @@ WSGI_APPLICATION = 'portfolio_backend.wsgi.application'
 
 # Database
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get("DATABASE_URL")
+    )
 }
 
 
