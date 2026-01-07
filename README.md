@@ -1,143 +1,199 @@
 # Amrita's Portfolio
 
+![GitHub Actions](https://github.com/Amritasingh600/Portfolio/actions/workflows/deploy.yml/badge.svg)
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Flask](https://img.shields.io/badge/Flask-3.0.0-green)
+
 An interactive and modern portfolio website showcasing projects, skills, achievements, and certifications.
+
+## 🌐 Live Demo
+- **Render:** [amrita-portfolio.onrender.com](https://amrita-portfolio.onrender.com)
 
 ## Features
 
-- 🎨 **Modern Design** - Clean and professional UI with gradient effects
+- 🎨 **Modern Design** - Clean and professional UI with purple wave theme
 - ✨ **Dynamic Animations** - Smooth transitions and interactive elements
 - 📱 **Fully Responsive** - Works perfectly on all devices
+- 📧 **Contact Form** - Email notifications via Flask-Mail
+- 🔒 **Secure** - Environment variables for sensitive data
+- 🚀 **CI/CD** - GitHub Actions for automated testing
 - 🎯 **Interactive Sections**:
   - Home with animated typing effect
   - About Me with education timeline
   - Skills with progress bars
-  - Projects showcase
+  - Projects showcase with GitHub links
   - Achievements timeline
-  - Certifications gallery
-  - Contact form
-- 🔗 **Social Links** - GitHub, LinkedIn, Codeforces, Email
+  - Certifications gallery (13 certificates)
+  - Gallery with marquee effect
+  - Contact form with email notifications
+- 🔗 **Social Links** - GitHub, LinkedIn, LeetCode, HackerRank, Email
 - 📄 **Resume Download** - Easy access to downloadable resume
 
-## Setup Instructions
+## 🛠️ Tech Stack
 
-### 1. Add Your Profile Image
+- **Backend:** Python, Flask 3.0.0
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Email:** Flask-Mail with Gmail SMTP
+- **Deployment:** Render.com / GitHub Actions
+- **Server:** Gunicorn (production)
 
-Replace the placeholder profile image:
-- Add your photo as `profile.png` in the root directory
-- Recommended: Use a photo with transparent background
-- Size: 500x500px or larger for best quality
+## 📦 Quick Start
 
-### 2. Add Project Images
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Amritasingh600/Portfolio.git
+cd Portfolio
+```
 
-Add images for your projects (6 images needed):
-- `project1.jpg` through `project6.jpg`
-- Recommended size: 800x600px
-- Place them in the root directory
+### 2. Create Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-### 3. Customize Content
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-Edit `index.html` to update:
-- Your name and personal information
-- Project details and links
-- Education information
-- Achievement descriptions
-- Certificate details
-- Contact information
-- Social media links
+### 4. Configure Environment Variables
+```bash
+cp .env.example .env
+# Edit .env with your Gmail credentials
+```
 
-### 4. Add Your Resume
+### 5. Run Locally
+```bash
+python app.py
+# Visit http://localhost:5000
+```
 
-- Add your resume PDF as `Amrita_Resume.pdf`
-- Update the download link in `script.js` (line ~270)
+## 🔐 GitHub Secrets Setup
 
-### 5. Update Links
+For GitHub Actions to work, add these secrets to your repository:
 
-Replace placeholder links with your actual profiles:
-- GitHub: Update all GitHub links
-- LinkedIn: Update LinkedIn profile URL
-- Codeforces: Update Codeforces profile URL
-- Email: Replace with your email address
-- Project links: Add actual GitHub/live demo links
+1. Go to **Repository → Settings → Secrets and variables → Actions**
+2. Click **"New repository secret"**
+3. Add the following secrets:
 
-## Customization
+| Secret Name | Description |
+|------------|-------------|
+| `MAIL_USERNAME` | Your Gmail address (e.g., singhamrita2904@gmail.com) |
+| `MAIL_PASSWORD` | Your Gmail App Password (16 characters) |
+| `RENDER_DEPLOY_HOOK_URL` | (Optional) Render deploy hook URL |
+
+### How to Get Gmail App Password:
+1. Go to [Google Account Settings](https://myaccount.google.com/)
+2. Enable **2-Step Verification**
+3. Go to **App Passwords**
+4. Generate a new app password for "Mail"
+
+## 🚀 Deployment Options
+
+### Option 1: Render.com (Recommended)
+1. Connect your GitHub repo to Render
+2. Set environment variables in Render dashboard
+3. Render auto-deploys on every push to main
+
+### Option 2: Railway.app
+1. Connect GitHub repo
+2. Add environment variables
+3. Deploy automatically
+
+### Option 3: Manual Deploy
+```bash
+gunicorn app:app
+```
+
+## 📁 Project Structure
+
+```
+Portfolio/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Actions CI/CD
+├── static/
+│   ├── styles.css          # Main stylesheet
+│   ├── script.js           # JavaScript functionality
+│   ├── pic.jpeg            # Profile image
+│   ├── resume.pdf          # Downloadable resume
+│   ├── *.png               # Project screenshots
+│   ├── *.jpeg              # Gallery images
+│   └── *.pdf               # Certificate files
+├── templates/
+│   └── index.html          # Main HTML template
+├── app.py                  # Flask application
+├── requirements.txt        # Python dependencies
+├── Procfile                # Deployment configuration
+├── .env.example            # Environment template
+├── .gitignore              # Git ignore rules
+└── README.md               # This file
+```
+
+## 🔧 GitHub Actions Workflow
+
+The workflow (`.github/workflows/deploy.yml`) automatically:
+
+1. ✅ Checks out the code
+2. ✅ Sets up Python 3.11
+3. ✅ Installs dependencies
+4. ✅ Runs syntax checks
+5. ✅ Tests Flask app
+6. ✅ Creates deployment artifact
+7. ✅ Triggers Render deployment (optional)
+
+### Workflow Triggers:
+- **Push to main:** Full build + deploy
+- **Pull requests:** Build + test only
+
+## 🎨 Customization
 
 ### Colors
-
-Edit CSS variables in `styles.css` (lines 12-22):
+Edit CSS variables in `static/styles.css`:
 ```css
 :root {
     --primary-color: #6c5ce7;
     --secondary-color: #00b894;
     --accent-color: #fd79a8;
-    /* ... more colors */
 }
 ```
 
 ### Typing Animation
-
-Edit phrases in `script.js` (lines ~50-56):
+Edit phrases in `static/script.js`:
 ```javascript
 const phrases = [
-    'Your Title 1',
-    'Your Title 2',
-    'Your Title 3'
+    'ML Enthusiast',
+    'AIML Specialist',
+    'Problem Solver'
 ];
 ```
 
-### Skills
+## 📧 Contact Form
 
-Update skill items in `index.html` skills section with your actual skills and proficiency levels.
+The contact form sends email notifications using:
+- **Flask-Mail** for email handling
+- **Gmail SMTP** for delivery
+- **App Passwords** for security
 
-## Running Locally
+## 🤝 Contributing
 
-Simply open `index.html` in your web browser. No build process required!
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing`)
+5. Open a Pull Request
 
-For development with live reload:
-```bash
-# Using Python
-python -m http.server 8000
+## 📄 License
 
-# Using Node.js
-npx serve
-```
+This project is open source. Feel free to use it for your own portfolio!
 
-Then visit `http://localhost:8000` in your browser.
+## 👩‍💻 Author
 
-## Technologies Used
+**Amrita Singh**
+- GitHub: [@Amritasingh600](https://github.com/Amritasingh600)
+- LinkedIn: [Amrita Singh](https://www.linkedin.com/in/amrita-singh-308333326/)
+- Email: singhamrita2904@gmail.com
 
-- HTML5
-- CSS3 (with CSS Grid and Flexbox)
-- Vanilla JavaScript
-- Font Awesome Icons
-- Google Fonts (Poppins)
+---
 
-## Browser Support
-
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
-
-## Performance Features
-
-- Lazy loading for images
-- Intersection Observer for animations
-- Optimized animations
-- Minimal dependencies
-
-## Deployment
-
-Deploy to any static hosting service:
-- GitHub Pages
-- Netlify
-- Vercel
-- AWS S3
-- Firebase Hosting
-
-## Credits
-
-Created with ❤️ and lots of ☕
-
-## License
-
-Feel free to use this template for your own portfolio. Attribution appreciated but not required.
+⭐ Star this repo if you found it helpful!
